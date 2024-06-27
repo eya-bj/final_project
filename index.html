@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetDelights.com</title>
+    <link rel="stylesheet" href="style_1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+</head>
+<body>
+  <!--topbar-->
+  <div class="top-bar">
+    <span style="font-size: xx-small;"><ion-icon name="call-outline"></ion-icon> +216 22 940 193</span>
+    <ul>
+      <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+  </div>
+  <!---NAVBAR-->
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="Borcelle (1).png" alt="logo"></a>
+    </div>
+    <div class="toogle">
+      <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+    </div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <!--IMGSLIDER-->
+
+  <div class="container">
+    <input type="radio" name="images" id="i1" checked>
+    <input type="radio" name="images" id="i2">
+    <input type="radio" name="images" id="i3">
+    <div class="slide_img" id="one">
+      <img src="448484403_1204981417301930_926377848672438184_n.jpg">
+      <div class="carousel-content">
+        <p>NEW DAYS AND HOURS</p>
+        <h2>Now Open Mondays</h2>
+        <p>We're opening seven days, 7am-6pm</p>
+        <button onclick="document.location='contact.html'">VISIT US</button>
+      </div>
+      <label for="i3" class="pre"></label>
+      <label for="i2" class="nxt"></label>
+    </div>
+
+    <div class="slide_img" id="two">
+      <img src=" 441909989_474807428468283_7731897288944314209_n.jpg">
+      <div class="carousel-content">
+        <h2>Celebrations Start Here</h2>
+        <p>Delecious and beautiful,a cake from SweetDelights alwyas means a truly special celebration.</p>
+        <button onclick="document.location='detail.html?id=1'">ORDER NOW</button>
+      </div>
+      <label for="i1" class="pre"></label>
+      <label for="i3" class="nxt"></label>
+    </div>
+
+    <div class="slide_img" id="three">
+      <img src="448309623_935675765000217_1411311511134481714_n.jpg">
+      <div class="carousel-content">
+        <p>Introducing</p>
+        <h2>Sweet Delights Sourdough</h2>
+        <p>At last!We're creating artisan sordough loaves,right in our kitchen.</p>
+        <button onclick="document.location='shop.html'">VIEW PRODUCTS</button>
+      </div>
+      <label for="i2" class="pre"></label>
+      <label for="i1" class="nxt"></label>
+    </div>
+
+    <div class="nav">
+      <label class="dots" id="dot1" for="i1"></label>
+      <label class="dots" id="dot2" for="i2"></label>
+      <label class="dots" id="dot3" for="i3"></label>
+    </div>
+</div>
+<!--Product Cards-->
+<section class="product_container">
+  <center>
+  <h1>Our best-selling Products</h1>
+  <hr class="line_style">
+  </center>
+  <div class="gallery">
+    <div class="content">
+      <img src="BittersweetBread_2024_2_Square_1100x.webp">
+      <h3>Seeded Multigrain Sandwich Bread</h3>
+      <ul>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star"></i></li>
+      </ul>
+      <h6>12.00dt</h6>
+      <button onclick="document.location='detail.html?id=7'">Add to cart</button>
+    </div>
+    <div class="content">
+      <img src="Cake_F03_Bow_1100x.webp">
+      <h3>Couture Double-loop Bow Cake</h3>
+      <ul>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star"></i></li>
+      </ul>
+      <h6>150.00dt</h6>
+      <button onclick="document.location='detail.html?id=1'">Order Now</button>
+    </div>
+    <div class="content">
+      <img src="MiniCupcakes_Vanilla_2023_1100x.webp">
+      <h3>Mini Vanilla Cupcakes - 12</h3>
+      <ul>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+      </ul>
+      <h6>30.00dt</h6>
+      <button onclick="document.location='detail.html?id=14'">Add to cart</button>
+    </div>
+    <div class="content">
+      <img src="SpringMacaronBoxes_1100x.webp">
+      <h3>French Macaron - Five-Piece Gift Box</h3>
+      <ul>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star"></i></li>
+      </ul>
+      <h6>18.00dt</h6>
+      <button onclick="document.location='detail.html?id=8'" >Add to cart</button>
+    </div>
+  </div>
+</section>
+<!--More cards-->
+<div class="card_container" style="background :linear-gradient(to bottom, #f6e6d1, #f2f2f2);">
+  <h1 class="heading">More of our products</h1>
+  <div class="box-container">
+    <div class="box">
+      <div class="box-img">
+        <img src="448628533_959221632652750_7610386178068370609_n.jpg">
+        <div class="overlay">
+          <p>Pastries+Desserts</p>
+          <a href="shop.html" class="btn">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-img">
+        <img src="449115288_7663921287050763_1076979510542051229_n.jpg">
+        <div class="overlay">
+          <p>Cakes</p>
+          <a href="shop.html" class="btn">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-img">
+        <img src="448780349_2683040421867477_4021392863353823806_n.jpg">
+        <div class="overlay">
+          <p>The Cafe</p>
+          <a href="contact.html" class="btn">PLAN A VISIT</a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-img">
+        <img src="441623377_481024754453405_5058213925876481110_n.jpg">
+        <div class="overlay">
+          <p>Cake of the month</p>
+          <a href="shop.html" class="btn">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--wedding link form---->
+<div class="wedding-slide">
+  <img src="sub-buzz-6305-1697044352-1.jpg" alt="Wedding Image">
+  <div class="wedding-content">
+    <h2>Let us celebrate with you</h2>
+    <p>We're excited to be the sweetest part of your wedding.</p>
+    <button onclick="document.location='morewedding.html'">LEARN MORE</button>
+  </div>
+</div>
+<!--footer-->
+<footer>
+  <div class="row">
+    <div class="col">
+      <h3>Menu <div class="underline"><span></span></div></h3>
+      <ul> <!-- Corrected the structure by adding the <ul> tag -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Learn More <div class="underline"><span></span></div></h3>
+      <p style="text-align: start;">Questions? Comments?<br>Drop us a line at</p>
+      <p class="email-id" style="text-align: start;">sweetdelights@gmail.com</p>
+    </div>
+    <div class="col">
+      <h3>Be the first to know <div class="underline"><span></span></div></h3>
+      <p>Join to receive advance notice of new products, holiday menus, special offers and more!</p>
+      <form>
+        <i class="far fa-envelope"></i> <!-- Corrected class name -->
+        <input type="email" placeholder="your-email@example.com" required>
+        <button type="submit"><i class="fas fa-arrow-right"></i></button> <!-- Corrected class name -->
+      </form>
+    </div>
+  </div>
+  <hr>
+  <p class="copyright">Sweet Delights PASTRY SHOP 2024-ALL RIGHTS RESERVED</p>
+</footer>
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>

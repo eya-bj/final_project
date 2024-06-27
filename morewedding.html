@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Inquiry Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+NO:wght@100..400&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+a, a:hover{
+    text-decoration: none;
+}
+h1{
+    font-size:large;
+    font-weight: bold;
+    font-family: "Playwrite NO", cursive;
+    color:#AA4A30;
+    padding-bottom:1.5%;
+}
+        body {
+            font-family: "Poppins",sans-serif;
+            padding: 20px;
+        }
+        .header-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header-section h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .header-section p {
+            font-size: 18px;
+            color: #555;
+            padding-bottom: 1.5%;
+        }
+        .header-img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid #ccc; /* Only bottom border */
+            outline: none; /* Remove default focus outline */
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #AA4A30;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-section">
+    <h1>Celebrate with impeccable style and taste</h1>
+    <p>For over 30 years, Bittersweet has helped couples celebrate with a focus on sophistication and taste for a wedding cake that will have your guests talking for years to come.</p>
+    <h1>Getting Started</h1>
+    <p>We can't wait to work with you on your wedding cake and sweets! To get started kindly fill out the form below and we'll be in touch as soon as possible.</p>
+</div>
+
+<form id="weddingForm" onsubmit="return validateForm()">
+    <label for="email">Email address *</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="fullName">Full name *</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="phone">Your phone number *</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required placeholder="123 456 7890">
+
+    <label for="coupleName">Name of Couple *</label>
+    <input type="text" id="coupleName" name="coupleName" required>
+
+    <label for="weddingDate">Wedding Date *</label>
+    <input type="text" id="weddingDate" name="weddingDate" placeholder="MM/DD/YY" required>
+
+    <label for="venue">Venue *</label>
+    <input type="text" id="venue" name="venue" required>
+
+    <label for="contactName">Planner or Venue Contact Name</label>
+    <input type="text" id="contactName" name="contactName">
+
+    <label for="contactPhone">Planner or Venue Contact Phone Number</label>
+    <input type="tel" id="contactPhone" name="contactPhone" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="123 456 7890">
+
+    <label for="guestCount">Estimated guest count *</label>
+    <input type="number" id="guestCount" name="guestCount" required min="1">
+
+    <fieldset>
+        <legend>What services are you interested in?</legend>
+        <label><input type="radio" name="servicesInterested" value="Wedding Cake"> Wedding Cake</label><br>
+        <label><input type="radio" name="servicesInterested" value="Sweet Table"> Sweet Table</label><br>
+        <label><input type="radio" name="servicesInterested" value="Groom's Cake"> Groom's Cake</label><br>
+        <label><input type="radio" name="servicesInterested" value="Wedding or Shower Favors"> Wedding or Shower Favors</label><br>
+    </fieldset>
+
+    <label for="hearAboutUs">How did you hear about us?</label>
+    <select id="hearAboutUs" name="hearAboutUs">
+        <option value="">Select an option</option>
+        <option value="Website">Website</option>
+        <option value="Social Media">Social Media</option>
+        <option value="Friend/Family">Friend/Family</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <button type="submit">Submit</button>
+</form>
+<a href="index.html" style="color:black">Back to the home page</a>
+
+<script>
+function validateForm() {
+    var email = document.getElementById("email").value;
+    var fullName = document.getElementById("fullName").value;
+    var phone = document.getElementById("phone").value;
+    var coupleName = document.getElementById("coupleName").value;
+    var weddingDate = document.getElementById("weddingDate").value;
+    var venue = document.getElementById("venue").value;
+    var guestCount = document.getElementById("guestCount").value;
+
+    // Regular expression to validate phone number format
+    var phoneRegex = /^[0-9]{3} [0-9]{3} [0-9]{4}$/;
+
+    // Check if email is valid
+    if (!email || !isValidEmail(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    // Check if full name is entered
+    if (!fullName) {
+        alert("Please enter your full name.");
+        return false;
+    }
+
+    // Check if phone number is valid
+    if (!phoneRegex.test(phone)) {
+        alert("Please enter a valid phone number (e.g., 123 456 7890).");
+        return false;
+    }
+
+    // Check if couple name is entered
+    if (!coupleName) {
+        alert("Please enter the name of the couple.");
+        return false;
+    }
+
+    // Check if wedding date is entered
+    if (!weddingDate) {
+        alert("Please enter the wedding date (MM/DD/YY format).");
+        return false;
+    }
+
+    // Check if venue is entered
+    if (!venue) {
+        alert("Please enter the venue.");
+        return false;
+    }
+
+    // Check if guest count is entered and positive
+    if (!guestCount || isNaN(guestCount) || guestCount < 1) {
+        alert("Please enter a valid estimated guest count (must be a positive number).");
+        return false;
+    }
+
+    // Optional: Check other fields as needed
+
+    // If all validations pass, show success message (you can replace alert with a modal or redirect)
+    alert("Form submitted successfully!");
+    return true; // Form will submit
+}
+
+function isValidEmail(email) {
+    // Basic email validation using regular expression
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+</script>
+
+</body>
+</html>

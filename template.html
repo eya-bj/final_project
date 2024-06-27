@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span style="font-size: xx-small;"><ion-icon name="call-outline"></ion-icon> +216 22 940 193</span>
+        <ul>
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+    </div>
+    
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="Borcelle (1).png" alt="logo"></a>
+        </div>
+        <div class="toggle">
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container_cart">
+        <header>
+            <div class="title">
+                <a href="\" style="color:#AA4A30;;">Our Shop </a>
+            </div>
+            <div class="icon-cart">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>                  
+                <span>0</span>
+            </div>
+        </header>
+        <div id="contentTab">
+            content in template file
+        </div>
+    </div>
+    
+    <!-- Cart Overlay -->
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            show item here
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button onclick="document.location='checkout.html'" class="checkout">
+                Check Out</button>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col">
+                <h3>Menu <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Learn More <div class="underline"><span></span></div></h3>
+                <p style="text-align: start;">Questions? Comments?<br>Drop us a line at</p>
+                <p class="email-id" style="text-align: start;">sweetdelights@gmail.com</p>
+            </div>
+            <div class="col">
+                <h3>Be the first to know <div class="underline"><span></span></div></h3>
+                <p>Join to receive advance notice of new products, holiday menus, special offers and more!</p>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="your-email@example.com" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Sweet Delights PASTRY SHOP 2024-ALL RIGHTS RESERVED</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="cart.js" type="module"></script>  
+</body>
+</html>

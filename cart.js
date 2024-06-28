@@ -12,23 +12,19 @@ import products from "./products.js";
     closebtn.addEventListener('click',()=>{
         body.classList.toggle('activeTabCart');
     })
-    const setproductincart=(idproduct , quantity , position)=>{
-        if (quantity > 0){
-            if (position < 0){
-                cart.push({
-                    product_id: idproduct,
-                    quantity: quantity
-                });
-            }else{
+    const setproductincart = (idproduct, quantity, position) => {
+            if (quantity > 0) {
+              if (position < 0) {
+                cart.push({ product_id: idproduct, quantity: quantity });
+              } else {
                 cart[position].quantity = quantity;
+              }
+            } else {
+              cart.splice(position, 1);
             }
-        }
-        else{
-            cart.splice(position,1);
-        }
-        localStorage.setItem('cart', JSON.stringify(cart));
-        refreshcarthtml();
-    }
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+            refreshcarthtml();
+          };
     const refreshcarthtml=()=>{
         let listhtml = document.querySelector('.listCart');
         let totalhtml = document.querySelector('.icon-cart span');
